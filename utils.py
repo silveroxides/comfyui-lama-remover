@@ -8,8 +8,9 @@ import os
 from comfy.model_management import get_torch_device
 DEVICE = get_torch_device()
 
-LAMA_MODEL_PATH = Path(__file__).parent.absolute().joinpath("ckpts")
-LAMA_CACHE_PATH = Path(__file__).parent.absolute().joinpath("ckpts","cache")
+import folder_paths
+
+LAMA_MODEL_PATH = Path(folder_paths.models_dir).joinpath("lama")
 LAMA_URL = "https://github.com/Sanster/models/releases/download/add_big_lama/big-lama.pt"
 
 #if img length is not a multiple of 8, then return the length divided by 8
@@ -103,9 +104,9 @@ def pil2comfy(img):
 
 # download models
 # 下载模型
-def get_models_path(filename, url=LAMA_URL, localdir=LAMA_MODEL_PATH):
+def get_models_path(filename, url=LAMA_URL, model_dir=LAMA_MODEL_PATH):
 
-    model_path = localdir.joinpath(filename)
+    model_path = model_dir.joinpath(filename)
 
     if not os.path.exists(model_path):
         print(f"biglama model not found, downloading...")
