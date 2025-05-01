@@ -4,10 +4,10 @@ A very simple ComfyUI node to remove item with mask.
 ## Install
 - Navigate to `/ComfyUI/custom_nodes/` folder 
 - Run \
-`git clone https://github.com/Layer-norm/comfyui-lama-remover.git` 
+`git clone https://github.com/silveroxides/comfyui-lama-remover.git` 
 - Restart ComfyUI 
 - (If downlaod error occued) \
-Download [big-lama.pt](https://github.com/Sanster/models/releases/download/add_big_lama/big-lama.pt) model to `/ComfyUI/custom_nodes/comfyui-lama-remover/ckpts/` folder
+Download [big-lama.pt](https://github.com/Sanster/models/releases/download/add_big_lama/big-lama.pt) model to `/ComfyUI/models/lama/` folder
 
 ## Examples
 ![remove with mask](example\example1.png)
